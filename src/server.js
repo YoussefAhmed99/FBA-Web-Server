@@ -9,6 +9,7 @@ app.use(authenticate);
 
 app.use('/api/rankspy', toolRouters.rankSpy);
 app.use('/api/adtactix', toolRouters.adtactix);
+app.use('/api/kdboosted', toolRouters.kdboosted);
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));

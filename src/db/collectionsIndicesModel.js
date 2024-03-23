@@ -1,24 +1,3 @@
-const sqlite3 = require('sqlite3').verbose();
-const dbPath = './fba_web_server.db';
-let db = new sqlite3.Database(dbPath, sqlite3.OPEN_READWRITE | sqlite3.OPEN_CREATE, (err) => {
-    if (err) {
-        console.error('Error opening database', err.message);
-    } else {
-        console.log('Connected to the SQLite database.');
-        db.run(`CREATE TABLE IF NOT EXISTS collectionsIndices (
-            id INTEGER PRIMARY KEY AUTOINCREMENT,
-            email TEXT NOT NULL,
-            collectionID TEXT NOT NULL,
-            asins TEXT,
-            resultSet TEXT
-        )`, (err) => {
-            if (err) {
-                console.error('Error creating table', err.message);
-            }
-        });
-    }
-});
-
 async function insertData(email, collectionID, asins) {
     return new Promise((resolve, reject) => {
         // Correctly use placeholders for all variables

@@ -1,8 +1,10 @@
 const express = require('express')
 const router = express.Router();
 
-router.get('/', async (req, res) => {
-    res.status(200).send(menus);
+router.get('/:registeredMail/:gmail/:ssid/:version', async (req, res) => {
+    const SQC = req.SQC;
+    console.log({ SQC })
+    res.status(200).send({ menus, SQC });
 });
 
 const menus = {

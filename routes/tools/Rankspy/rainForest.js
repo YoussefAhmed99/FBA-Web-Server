@@ -1,6 +1,6 @@
 const express = require('express')
 const axios = require('axios'); // Import axios
-const { queryDataByEmail, updateCollectionsIndices, updateCollectionsIndicesResult, insertData } = require('../../../src/db/collectionsIndicesModel');
+const { queryDataByEmail, updateCollectionsIndices, updateCollectionsIndicesResult, insertData } = require('../../../src/db/Models/collectionsIndices');
 const { downloadURL, unzipDirectory, parseCSVData, getDataByHeaders, formatUTCDate, getMonthNumber } = require('../../../sharedFunctions/sharedFunctions');
 const router = express.Router();
 const api_key = '967CF4094E74405881FAD697D969332E';

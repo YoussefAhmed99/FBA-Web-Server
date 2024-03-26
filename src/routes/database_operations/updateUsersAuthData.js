@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const usersAuthDataModel = require('../src/db/Models/usersAuthData');
+const usersAuthDataModel = require('../../db/Models/usersAuthData');
 
 router.post('/', async (req, res) => {
     const userData = req.body;

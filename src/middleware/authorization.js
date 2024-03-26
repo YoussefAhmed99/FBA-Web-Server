@@ -1,7 +1,7 @@
-const db = require('../src/db/sqliteDb.js'); // assuming this is the correct path to your db config
-const { getUserAuthData } = require('../src/db/Models/usersAuthData.js');
-const { getRestrictedSSIDs } = require('../src/db/Models/disabledCopies.js');
-const { getUserCopies } = require('../src/db/Models/registeredCopiesModel.js');
+const db = require('../db/sqliteDb.js'); // assuming this is the correct path to your db config
+const { getUserAuthData } = require('../db/Models/usersAuthData.js');
+const { getRestrictedSSIDs } = require('../db/Models/disabledCopies.js');
+const { getUserCopies } = require('../db/Models/registeredCopiesModel.js');
 
 async function authenticate(req, res, next) {
     const toolsMap = {
